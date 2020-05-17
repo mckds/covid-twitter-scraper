@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  covid-twitter-streams:
+    build: .
+    volumes:
+      - .:/db
+    environment:
+      - TWITTER_API_KEY=${TWITTER_API_KEY}
+      - TWITTER_API_KEY_SECRET=${TWITTER_API_KEY_SECRET}
+      - TWITTER_API_ACCESS_TOKEN=${TWITTER_API_ACCESS_TOKEN}
+      - TWITTER_API_ACCESS_TOKEN_SECRET=${TWITTER_API_ACCESS_TOKEN_SECRET}
+      - PYTHONUNBUFFERED=1
